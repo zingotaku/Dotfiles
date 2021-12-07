@@ -105,9 +105,17 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source /home/zing/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-alias neofetch="neofetch --ascii_distro macintosh"
-alias vim=nvim
-alias nano=micro
+#alias neofetch="neofetch --ascii_distro blackarch"
+alias neofetch="neofetch --ascii_distro windows10;echo Windows com algumas coisas a mais;figlet porno gay"
+#alias vim=nvim
+#alias nano=micro
+
+## Syntax hightlight configuration
+typeset -A ZSH_HIGHLIGHT_STYLES
+ZSH_HIGHLIGHT_STYLES[alias]='fg=#ff9900'
+ZSH_HIGHLIGHT_STYLES[builtin]='fg=#0066cc'
+ZSH_HIGHLIGHT_STYLES[precommand]='fg=#0066cc'
+ZSH_HIGHLIGHT_STYLES[arg0]='fg=#0099cc'
 
 mkcd() {
 	mkdir $1
@@ -115,7 +123,7 @@ mkcd() {
 }
 
 alias la='ls -la'
+alias pwd='pwd | lolcat'
 alias paru='paru --color=auto'
-export PATH=/home/david/pear/bin:$PATH
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

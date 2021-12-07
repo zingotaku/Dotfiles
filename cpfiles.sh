@@ -5,3 +5,6 @@ cp -r $HOME/.config/polybar/scripts ./polybar.scripts
 cp $HOME/.config/picom/picom.conf .
 cp $HOME/.config/alacritty/alacritty.yml .
 cp $HOME/.vimrc ./vimrc
+cp $HOME/.zshrc ./zshrc
+cp $HOME/.oh-my-zsh/themes/half-life2.zsh-theme ./half-life.zsh-theme
+
