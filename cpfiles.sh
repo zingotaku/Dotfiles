@@ -4,3 +4,4 @@ cp $HOME/.config/polybar/config ./polybar.config
 cp -r $HOME/.config/polybar/scripts ./polybar.scripts
 cp $HOME/.config/picom/picom.conf .
 cp $HOME/.config/alacritty/alacritty.yml .
+cp $HOME/.vimrc ./vimrc
