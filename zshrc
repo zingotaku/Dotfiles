@@ -8,7 +8,7 @@ export ZSH="/home/zing/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="half-life2"
+# ZSH_THEME="half-life2"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -106,7 +106,7 @@ source $ZSH/oh-my-zsh.sh
 source /home/zing/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 #alias neofetch="neofetch --ascii_distro blackarch"
-alias neofetch="neofetch --ascii_distro windows10;echo Windows com algumas coisas a mais;figlet porno gay"
+# alias neofetch="neofetch --ascii_distro windows10;echo Windows com algumas coisas a mais;figlet porno gay"
 #alias vim=nvim
 #alias nano=micro
 
@@ -127,3 +127,11 @@ alias pwd='pwd | lolcat'
 alias paru='paru --color=auto'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# .zshrc
+fpath+=$HOME/.zsh/pure
+
+# .zshrc
+autoload -U promptinit; promptinit
+prompt pure
+alias xclip="xclip -selection clipboard"
