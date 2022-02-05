@@ -2,13 +2,13 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/zing/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="half-life2"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -70,11 +70,7 @@ export ZSH="/home/zing/.oh-my-zsh"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-	git
-	zsh-autosuggestions
-	
-)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -103,35 +99,12 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /home/zing/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-#alias neofetch="neofetch --ascii_distro blackarch"
-# alias neofetch="neofetch --ascii_distro windows10;echo Windows com algumas coisas a mais;figlet porno gay"
-#alias vim=nvim
-#alias nano=micro
-
-## Syntax hightlight configuration
-typeset -A ZSH_HIGHLIGHT_STYLES
-ZSH_HIGHLIGHT_STYLES[alias]='fg=#ff9900'
-ZSH_HIGHLIGHT_STYLES[builtin]='fg=#0066cc'
-ZSH_HIGHLIGHT_STYLES[precommand]='fg=#0066cc'
-ZSH_HIGHLIGHT_STYLES[arg0]='fg=#0099cc'
-
-mkcd() {
-	mkdir $1
-	cd $1
-}
-
-alias la='ls -la'
-alias pwd='pwd | lolcat'
-alias paru='paru --color=auto'
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# .zshrc
-fpath+=$HOME/.zsh/pure
-
 # .zshrc
 autoload -U promptinit; promptinit
 prompt pure
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+alias ls="exa"
 alias xclip="xclip -selection clipboard"
